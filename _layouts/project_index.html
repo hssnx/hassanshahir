@@ -17,23 +17,33 @@
       </div>
     </div>
 
-    {% assign sorted_projects = site.pages | where_exp: "page", "page.url contains '/projects/' and page.url != '/projects/'" | sort: "date" | reverse %}
-    {% assign latest_project_date = sorted_projects[0].date | date: "%B %d, %Y" %}
+    <!-- Find latest updated project manually -->
+    {% assign last_project = nil %}
+    {% for page in site.pages %}
+      {% if page.url contains '/projects/' and page.url != '/projects/' %}
+        {% assign last_project = page %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
 
     <div class="page-properties">
       <h2>Projects</h2>
       <p>A showcase of my personal and collaborative projects in tech and beyond.</p>
-      <p>Last Updated: {{ latest_project_date }}</p>
+      <p>Last Updated: {{ last_project.date | date: "%B %d, %Y" }}</p>
     </div>
 
     <div class="divider"></div>
 
+    <!-- Loop through and filter manually -->
     <ul class="content-list">
+      {% assign sorted_projects = site.pages | sort: "date" | reverse %}
       {% for page in sorted_projects %}
-        <li class="content-entry">
-          <span class="item-date">{{ page.date | date: "%B %d, %Y" }}</span>:
-          <a href="{{ page.url }}">{{ page.title }}</a>
-        </li>
+        {% if page.url contains '/projects/' and page.url != '/projects/' %}
+          <li class="content-entry">
+            <span class="item-date">{{ page.date | date: "%B %d, %Y" }}</span>:
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>

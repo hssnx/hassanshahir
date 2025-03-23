@@ -17,23 +17,31 @@
       </div>
     </div>
 
+    {% assign last_essay = nil %}
+    {% for page in site.pages %}
+      {% if page.url contains '/essays/' and page.url != '/essays/' %}
+        {% assign last_essay = page %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
     <div class="page-properties">
       <h2>Essays</h2>
       <p>A collection of my essays, musings, and long-form writings.</p>
-      <p>Last Updated:
-        {% assign sorted = site.pages | where_exp: "p", "p.url contains '/essays/' and p.url != '/essays/'" | sort: "date" | reverse %}
-        {{ sorted[0].date | date: "%B %d, %Y" }}
-      </p>
+      <p>Last Updated: {{ last_essay.date | date: "%B %d, %Y" }}</p>
     </div>
 
     <div class="divider"></div>
 
     <ul class="content-list">
-      {% for page in sorted %}
-        <li class="content-entry">
-          <span class="item-date">{{ page.date | date: "%B %d, %Y" }}</span>:
-          <a href="{{ page.url }}">{{ page.title }}</a>
-        </li>
+      {% assign sorted_essays = site.pages | sort: "date" | reverse %}
+      {% for page in sorted_essays %}
+        {% if page.url contains '/essays/' and page.url != '/essays/' %}
+          <li class="content-entry">
+            <span class="item-date">{{ page.date | date: "%B %d, %Y" }}</span>:
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
