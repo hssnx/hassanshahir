@@ -1,0 +1,19 @@
+---
+layout: essay_single
+title: "Pashto NEEDS a Latin Script"
+date: 2025-03-09
+permalink: /essays/pashto/
+tags: [language, Pashto, script, literacy, digital]
+---
+
+Pashto is an ancient language descended from the Indo-European family (though its exact origins remain somewhat ambiguous, see [this](https://en.wikipedia.org/wiki/Theories_of_Pashtun_origin)). It’s spoken by approximately 35–50 million people, primarily in Afghanistan and Pakistan. Despite its long history, Pashto remained mainly an oral language for centuries, influenced significantly by Persian, Greek, and regional languages. It wasn't until around the 7th century that Pashto began to be written, marked notably by the first Pashto poem composed by Amir Kror Suri around 9th century (AD). It's one of my favorite pieces of Pashto literature.
+
+Our language adopted the Arabic script following the Islamization of our region in the 7th century. It’s important to acknowledge that this was not a deliberate, conscious choice by the Pashtoon community, but rather an inevitable outcome shaped by historical, religious, and political influences. With Islam's spread, learning Arabic became essential for religious purposes, especially reading the Quran. Politically, the Umayyad Dynasty's decision to establish Arabic as the official language significantly reinforced this adoption. Although culturally and religiously significant, the Arabic script was inherently unsuitable for Pashto, as Arabic is a Semitic language, vastly different from Pashto’s Indo-European roots. This mismatch required modifications, notably by scholar Bayazid Pir Roshan in the 16th century, who introduced new letters to better capture Pashto’s distinct sounds. However, even these adaptations left the script overly complex and inadequate for our practical needs.
+
+Today, the Arabic script presents numerous practical difficulties for Pashto speakers. Personally, I've struggled with its ambiguity, primarily because vowels are usually omitted, making reading and writing unnecessarily complicated and especially challenging for new learners. Additionally, the script contains redundant letters representing identical sounds, which further complicates spelling. Dialect differences also remain poorly represented, creating inconsistency in written language. These challenges severely limit Pashto’s ease of use in digital platforms, hinder global integration, and slow down literacy efforts.
+
+Given these issues, I firmly believe adopting a Latin-based script could offer a significant improvement. A Latin alphabet would explicitly represent both vowels and consonants, greatly simplifying reading, writing, and spelling. This change would notably boost literacy rates and facilitate Pashto’s seamless integration into modern technology and digital communication, thereby improving our global presence and accessibility.
+
+Historical examples demonstrate the success of such reforms. For example, Turkey transitioned from Arabic to Latin script in 1928, significantly increasing literacy and modernizing their language use. Vietnam similarly adopted the Latin-based Quốc Ngữ, greatly enhancing international accessibility. Azerbaijan and Uzbekistan also successfully transitioned, notably benefiting their languages digitally. These examples strongly suggest that a similar shift for Pashto is both achievable and necessary.
+
+This perspective draws heavily from Ahmad Wafi Hayat’s peer-reviewed paper, a work I greatly respect. Hayat has proposed a Latin-based alphabet for Pashto, accessible [here](https://www.sciencepublishinggroup.com/article/10.11648/j.ijecs.20190401.11). While his proposal is promising, further simplification would be crucial for easier digital integration and learning. With careful refinement, a Latin-based Pashto script could profoundly enhance our language’s literacy, digital presence, and global accessibility, an exciting prospect that inspires me deeply.

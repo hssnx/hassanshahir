@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/book_index.css" />
+</head>
+<body>
+  <div class="book-container">
+    <div class="book-header-bar">
+      <div class="book-header-left"><a href="/">Hassan Shahir</a></div>
+      <div class="book-header-right">
+        <a href="/essays/">essays</a>
+        <a href="/books/">books</a>
+        <a href="/projects/">projects</a>
+      </div>
+    </div>
+
+    {% assign sorted_books = site.pages | where_exp: "page", "page.url contains '/books/' and page.url != '/books/'" | sort: "date" | reverse %}
+    {% assign latest_book_date = sorted_books[0].date | date: "%B %d, %Y" %}
+
+    <div class="page-properties">
+      <h2>Books</h2>
+      <p>A curated list of books I recommend, have read, or am currently exploring.</p>
+      <p>Last Updated: {{ latest_book_date }}</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <ul class="content-list">
+      {% for page in sorted_books %}
+        <li class="content-entry">
+          <span class="item-date">{{ page.date | date: "%B %d, %Y" }}</span>:
+          <a href="{{ page.url }}">{{ page.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>

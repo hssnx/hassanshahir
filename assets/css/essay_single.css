@@ -1,0 +1,142 @@
+/* ==========================================================================
+STYLES FOR essay_single.html (individual essay pages)
+========================================================================== */
+
+.article-title {
+text-align: center;
+margin-bottom: 0.5em;
+font-size: 2em;
+font-weight: 600;
+}
+
+.article-properties {
+text-align: center;
+margin-bottom: 1em;
+font-size: 0.9em;
+color: #707070;
+}
+
+.article-properties span {
+margin-right: 1em;
+}
+
+.article-content {
+font-size: 1em;
+}
+
+.article-image {
+text-align: center;
+margin-bottom: 1.5rem;
+}
+
+.article-image img {
+width: 100%;
+height: 500px;
+object-fit: cover;
+border-radius: 5px;
+}
+
+
+.essay-container {
+max-width: 800px;
+margin: 0 auto;
+padding: 2rem;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+line-height: 1.6;
+}
+
+.essay-header-bar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 2rem;
+border-bottom: 1px solid #eaeaea;
+padding-bottom: 1rem;
+}
+
+.essay-header-left {
+font-weight: bold;
+font-size: 1.2em;
+}
+
+.essay-header-left a {
+text-decoration: none;
+color: inherit;
+transition: color 0.3s ease;
+}
+
+.essay-header-right {
+display: flex;
+align-items: center;
+}
+
+.essay-header-right a {
+margin-right: 1.5rem;
+text-decoration: none;
+color: inherit;
+font-weight: 500;
+text-transform: lowercase;
+transition: color 0.3s ease;
+}
+
+.essay-header-right a:last-child {
+margin-right: 0;
+}
+
+a:hover {
+color: #0249fa;
+}
+
+/* Mobile navigation (optional) */
+.hamburger {
+display: none;
+flex-direction: column;
+cursor: pointer;
+width: 24px;
+height: 18px;
+justify-content: space-between;
+}
+
+.hamburger span {
+display: block;
+height: 3px;
+background: #000;
+border-radius: 2px;
+transition: 0.3s;
+}
+
+.mobile-nav {
+display: none;
+flex-direction: column;
+background: #fff;
+border: 1px solid #eaeaea;
+border-radius: 5px;
+padding: 1rem;
+margin-top: 1rem;
+}
+
+.mobile-nav a {
+margin: 0.5rem 0;
+text-decoration: none;
+color: inherit;
+transition: color 0.3s ease;
+}
+
+.mobile-nav.active {
+display: flex;
+}
+
+@media (max-width: 768px) {
+.essay-header-right {
+display: none;
+}
+.hamburger {
+display: flex;
+}
+}
+
+.divider,
+.article-divider {
+border-top: 1px solid #eaeaea;
+margin: 2em 0;
+}

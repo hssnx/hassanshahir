@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/project_single.css" />
+</head>
+<body>
+  <div class="project-container">
+    <div class="project-header-bar">
+      <div class="project-header-left"><a href="/">Hassan Shahir</a></div>
+      <div class="project-header-right">
+        <a href="/essays/">essays</a>
+        <a href="/books/">books</a>
+        <a href="/projects/">projects</a>
+      </div>
+    </div>
+
+    <h1 class="article-title">{{ page.title }}</h1>
+
+    <div class="article-properties">
+      <span class="property-date">Published: {{ page.date | date: "%B %d, %Y" }}</span>
+      <span class="property-section">Section: Projects</span>
+
+      {% assign words = content | number_of_words %}
+      {% assign minutes = words | divided_by:200 %}
+      {% assign seconds = words | modulo:200 | times:60 | divided_by:200 %}
+      <span class="property-time">
+        Time:
+        {% if minutes > 0 %}{{ minutes }} min {% endif %}
+        {% if seconds > 0 %}{{ seconds | round }} sec {% endif %}
+        read
+      </span>
+    </div>
+
+    {% if page.tags %}
+      <div class="article-properties">
+        <span class="property-tags">Tags: {{ page.tags | join: ", " }}</span>
+      </div>
+    {% endif %}
+
+    <div class="article-divider"></div>
+
+    {% if page.image %}
+      <div class="article-image">
+        <img src="{{ page.image }}" alt="{{ page.title }}" />
+      </div>
+    {% endif %}
+
+    <div class="article-content">
+      {{ content }}
+    </div>
+  </div>
+</body>
+</html>

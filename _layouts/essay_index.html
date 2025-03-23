@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/essay_index.css" />
+</head>
+<body>
+  <div class="essay-container">
+    <div class="essay-header-bar">
+      <div class="essay-header-left"><a href="/">Hassan Shahir</a></div>
+      <div class="essay-header-right">
+        <a href="/essays/">essays</a>
+        <a href="/books/">books</a>
+        <a href="/projects/">projects</a>
+      </div>
+    </div>
+
+    <div class="page-properties">
+      <h2>Essays</h2>
+      <p>A collection of my essays, musings, and long-form writings.</p>
+      <p>Last Updated:
+        {% assign sorted = site.pages | where_exp: "p", "p.url contains '/essays/' and p.url != '/essays/'" | sort: "date" | reverse %}
+        {{ sorted[0].date | date: "%B %d, %Y" }}
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <ul class="content-list">
+      {% for page in sorted %}
+        <li class="content-entry">
+          <span class="item-date">{{ page.date | date: "%B %d, %Y" }}</span>:
+          <a href="{{ page.url }}">{{ page.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
