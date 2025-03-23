@@ -17,8 +17,9 @@
       </div>
     </div>
 
+    {% assign sorted_books = site.pages | sort: "date" | reverse %}
     {% assign last_book = nil %}
-    {% for page in site.pages %}
+    {% for page in sorted_books %}
       {% if page.url contains '/books/' and page.url != '/books/' %}
         {% assign last_book = page %}
         {% break %}
@@ -34,7 +35,6 @@
     <div class="divider"></div>
 
     <ul class="content-list">
-      {% assign sorted_books = site.pages | sort: "date" | reverse %}
       {% for page in sorted_books %}
         {% if page.url contains '/books/' and page.url != '/books/' %}
           <li class="content-entry">
