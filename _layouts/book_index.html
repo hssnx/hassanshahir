@@ -17,23 +17,31 @@
       </div>
     </div>
 
-    {% assign sorted_books = site.pages | where_exp: "page", "page.url contains '/books/' and page.url != '/books/'" | sort: "date" | reverse %}
-    {% assign latest_book_date = sorted_books[0].date | date: "%B %d, %Y" %}
+    {% assign last_book = nil %}
+    {% for page in site.pages %}
+      {% if page.url contains '/books/' and page.url != '/books/' %}
+        {% assign last_book = page %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
 
     <div class="page-properties">
       <h2>Books</h2>
       <p>A curated list of books I recommend, have read, or am currently exploring.</p>
-      <p>Last Updated: {{ latest_book_date }}</p>
+      <p>Last Updated: {{ last_book.date | date: "%B %d, %Y" }}</p>
     </div>
 
     <div class="divider"></div>
 
     <ul class="content-list">
+      {% assign sorted_books = site.pages | sort: "date" | reverse %}
       {% for page in sorted_books %}
-        <li class="content-entry">
-          <span class="item-date">{{ page.date | date: "%B %d, %Y" }}</span>:
-          <a href="{{ page.url }}">{{ page.title }}</a>
-        </li>
+        {% if page.url contains '/books/' and page.url != '/books/' %}
+          <li class="content-entry">
+            <span class="item-date">{{ page.date | date: "%B %d, %Y" }}</span>:
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
