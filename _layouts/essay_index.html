@@ -17,8 +17,9 @@
       </div>
     </div>
 
+    {% assign sorted_essays = site.pages | sort: "date" | reverse %}
     {% assign last_essay = nil %}
-    {% for page in site.pages %}
+    {% for page in sorted_essays %}
       {% if page.url contains '/essays/' and page.url != '/essays/' %}
         {% assign last_essay = page %}
         {% break %}
