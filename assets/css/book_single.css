@@ -168,8 +168,47 @@ a:hover {
   .essay-header-right {
     display: none;
   }
-
   .hamburger {
     display: flex;
   }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 24px;
+  height: 18px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.mobile-nav a {
+  margin: 0.5rem 0;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav.active {
+  display: flex;
 }

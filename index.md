@@ -11,22 +11,13 @@ permalink: /
 
 <div class="divider"></div>
 
-<p>Hello World, welcome to my little corner of the internet. If you’ve stumbled across this site and like what you see, that’s great! For me, it’s just a personal archive.</p>
+Hello World, welcome to my little corner of the internet. If you’ve stumbled across this site and like what you see, that’s great! For me, it’s just a personal archive.
 
-<p>
-  Here, I share my thoughts (<a href="/essays/">essays</a>),  
-  what I’m reading (<a href="/books/">books</a>),  
-  and what I’m working on (<a href="/projects/">projects</a>).  
-  If you find something worthwhile here, that’s a bonus.
-</p>    
+Here, I share my thoughts ([essays](/essays/)), what I’m reading ([books](/books/)), and what I’m working on ([projects](/projects/)). If you find something worthwhile here, that’s a bonus.
 
-<p>
-  I'm Hassan. I like tech, philosophy, sleep, and working on my ideas. I'm 18. I go to school. I code. I read. I build &amp; break and I think... (a lot).
-</p>
+I'm Hassan. I like tech, philosophy, sleep, and working on my ideas. I'm 18. I go to school. I code. I read. I build & break and I think... (a lot).
 
 <div class="divider"></div>
 
-<p>
-  Email me at hassan@hassanshahir.com. You can also send me encrypted mail using <a href="https://raw.githubusercontent.com/hssnx/hssnx.github.io/refs/heads/main/assets/hassan.asc">this PGP public key</a> (ID 054E27C1, fingerprint F577 F32C 9960 BDF9 16BB 78B4 D54D 2C1E 054E 27C1).
-</p>
+Email me at hassan@hassanshahir.com. You can also send me encrypted mail using [this PGP public key](https://raw.githubusercontent.com/hssnx/hssnx.github.io/refs/heads/main/assets/hassan.as(ID 054E27C1, fingerprint F577 F32C 9960 BDF9 16BB 78B4 D54D 2C1E 054E 27C1).
 

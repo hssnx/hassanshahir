@@ -9,12 +9,26 @@
 <body>
   <div class="project-container">
     <div class="project-header-bar">
-      <div class="project-header-left"><a href="/">Hassan Shahir</a></div>
+      <div class="project-header-left">
+        <a href="/">Hassan Shahir</a>
+      </div>
       <div class="project-header-right">
         <a href="/essays/">essays</a>
         <a href="/books/">books</a>
         <a href="/projects/">projects</a>
       </div>
+      <!-- Hamburger Menu -->
+      <div class="hamburger" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="/essays/">essays</a>
+      <a href="/books/">books</a>
+      <a href="/projects/">projects</a>
     </div>
 
     <!-- Find latest updated project manually -->
@@ -48,5 +62,12 @@
       {% endfor %}
     </ul>
   </div>
+
+  <script>
+    function toggleMobileNav() {
+      var mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

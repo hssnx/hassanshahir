@@ -9,12 +9,26 @@
 <body>
   <div class="essay-container">
     <div class="essay-header-bar">
-      <div class="essay-header-left"><a href="/">Hassan Shahir</a></div>
+      <div class="essay-header-left">
+        <a href="/">Hassan Shahir</a>
+      </div>
       <div class="essay-header-right">
         <a href="/essays/">essays</a>
         <a href="/books/">books</a>
         <a href="/projects/">projects</a>
       </div>
+      <!-- Hamburger Menu -->
+      <div class="hamburger" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="/essays/">essays</a>
+      <a href="/books/">books</a>
+      <a href="/projects/">projects</a>
     </div>
 
     <h1 class="article-title">The War We Choose</h1>
@@ -22,7 +36,6 @@
     <div class="article-properties">
       <span class="property-date">Published: December 24, 2024</span>
       <span class="property-section">Section: Essays</span>
-
       
       
       
@@ -63,5 +76,11 @@
       <a href="/essays/">← Back to essays</a>
     </div>
   </div>
+  <script>
+    function toggleMobileNav() {
+      var mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
