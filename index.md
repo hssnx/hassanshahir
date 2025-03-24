@@ -27,6 +27,6 @@ permalink: /
 <div class="divider"></div>
 
 <p>
-  Email me at hassan@hassanshahir.com. You can also send me encrypted mail using <a href="https://raw.githubusercontent.com/hssnx/hssnx.github.io/refs/heads/main/public/hassan.asc">this PGP public key</a> (ID 054E27C1, fingerprint F577 F32C 9960 BDF9 16BB 78B4 D54D 2C1E 054E 27C1).
+  Email me at hassan@hassanshahir.com. You can also send me encrypted mail using <a href="https://raw.githubusercontent.com/hssnx/hssnx.github.io/refs/heads/main/assets/hassan.asc">this PGP public key</a> (ID 054E27C1, fingerprint F577 F32C 9960 BDF9 16BB 78B4 D54D 2C1E 054E 27C1).
 </p>
 

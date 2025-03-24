@@ -1,0 +1,78 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hassan Shahir</title>
+  <link rel="stylesheet" href="/assets/css/landing_page.css" />
+</head>
+
+<body>
+  <div class="notion-container">
+    <!-- Header Bar -->
+    <div class="header-bar">
+      <div class="header-left">
+        <a href="/">Hassan Shahir</a>
+      </div>
+      <div class="header-right">
+        <a href="/essays/">essays</a>
+        <a href="/books/">books</a>
+        <a href="/projects/">projects</a>
+      </div>
+      <div class="hamburger" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="/essays/">essays</a>
+      <a href="/books/">books</a>
+      <a href="/projects/">projects</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="notion-content">
+      <div class="notion-header">
+  <p><em>“Let everything happen to you. Beauty and terror. Just keep going. No feeling is final.”</em></p>
+  <p><strong>– Rainer Maria Rilke</strong></p>
+</div>
+
+<div class="divider"></div>
+
+<p>Hello World, welcome to my little corner of the internet. If you’ve stumbled across this site and like what you see, that’s great! For me, it’s just a personal archive.</p>
+
+<p>
+  Here, I share my thoughts (<a href="/essays/">essays</a>),  
+  what I’m reading (<a href="/books/">books</a>),  
+  and what I’m working on (<a href="/projects/">projects</a>).  
+  If you find something worthwhile here, that’s a bonus.
+</p>
+
+<p>
+  I'm Hassan. I like tech, philosophy, sleep, and working on my ideas. I'm 18. I go to school. I code. I read. I build &amp; break and I think... (a lot).
+</p>
+
+<div class="divider"></div>
+
+<p>
+  Email me at hassan@hassanshahir.com. You can also send me encrypted mail using <a href="https://raw.githubusercontent.com/hssnx/hssnx.github.io/refs/heads/main/public/hassan.asc">this PGP public key</a> (ID 054E27C1, fingerprint F577 F32C 9960 BDF9 16BB 78B4 D54D 2C1E 054E 27C1).
+</p>
+
+
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    function toggleMobileNav() {
+      var mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
+
