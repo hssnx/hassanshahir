@@ -140,3 +140,18 @@ display: flex;
 border-top: 1px solid #eaeaea;
 margin: 2em 0;
 }
+.essay-back-link {
+text-align: center;
+margin-top: 3rem;
+}
+
+.essay-back-link a {
+font-size: 0.9rem;
+text-decoration: none;
+color: #707070;
+transition: color 0.2s ease;
+}
+
+.essay-back-link a:hover {
+color: #0249fa;
+}  

@@ -3,55 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} | Hassan Shahir</title>
   <link rel="stylesheet" href="/assets/css/book_single.css" />
 </head>
 <body>
-  <div class="book-container">
-    <div class="book-header-bar">
-      <div class="book-header-left"><a href="/">Hassan Shahir</a></div>
-      <div class="book-header-right">
+  <div class="essay-container">
+    <div class="essay-header-bar">
+      <div class="essay-header-left"><a href="/">Hassan Shahir</a></div>
+      <div class="essay-header-right">
         <a href="/essays/">essays</a>
         <a href="/books/">books</a>
         <a href="/projects/">projects</a>
       </div>
     </div>
 
-    <h1 class="article-title">{{ page.title }}</h1>
+    <main class="content">
+      <article class="book">
+        <header class="book-header">
+          <h1 class="article-title">{{ page.title }}</h1>
 
-    <div class="article-properties">
-      <span class="property-date">Published: {{ page.date | date: "%B %d, %Y" }}</span>
-      <span class="property-section">Section: Books</span>
+          <div class="article-properties">
+            {% if page.author %}
+              <span class="property-author">by {{ page.author }}</span>
+            {% endif %}
+            {% if page.date %}
+              <span class="property-date">Published: {{ page.date | date: "%B %d, %Y" }}</span>
+            {% endif %}
+            {% if page.rating %}
+              <span class="property-rating">
+                Rating:
+                {% for i in (1..5) %}
+                  {% if i <= page.rating %}★{% else %}☆{% endif %}
+                {% endfor %}
+              </span>
+            {% endif %}
+          </div>
 
-      {% assign words = content | number_of_words %}
-      {% assign minutes = words | divided_by:200 %}
-      {% assign seconds = words | modulo:200 | times:60 | divided_by:200 %}
+          {% if page.cover %}
+            <div class="article-image">
+              <img src="{{ page.cover }}" alt="{{ page.title }} cover">
+            </div>
+          {% endif %}
+        </header>
 
-      <span class="property-time">
-        Time:
-        {% if minutes > 0 %}{{ minutes }} min {% endif %}
-        {% if seconds > 0 %}{{ seconds | round }} sec {% endif %}
-        read
-      </span>
-    </div>
+        <div class="article-divider"></div>
 
-    {% if page.tags %}
-      <div class="article-properties">
-        <span class="property-tags">Tags: {{ page.tags | join: ", " }}</span>
-      </div>
-    {% endif %}
+        <div class="article-content">
+          {{ content }}
+        </div>
 
-    <div class="article-divider"></div>
-
-    {% if page.image %}
-      <div class="article-image">
-        <img src="{{ page.image }}" alt="{{ page.title }}" />
-      </div>
-    {% endif %}
-
-    <div class="article-content">
-      {{ content }}
-    </div>
+        <footer class="book-footer">
+          <a href="/books" class="back-link">← Back to books</a>
+        </footer>
+      </article>
+    </main>
   </div>
 </body>
 </html>

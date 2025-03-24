@@ -2,7 +2,6 @@
 layout: essay_single
 title: "World’s Hardest Problems"
 date: 2024-08-25
-permalink: /essays/problems/
 tags: [innovation, technology, sustainability, healthcare, digital]
 ---
 

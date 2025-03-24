@@ -2,7 +2,6 @@
 layout: essay_single
 title: "Soldiers Die, Soldiers Kill"
 date: 2024-02-27
-permalink: /essays/soldiers/
 tags: [politics, soldiers, war, system, power]
 ---
 

@@ -2,7 +2,6 @@
 layout: essay_single
 title: "Pashto NEEDS a Latin Script"
 date: 2025-03-09
-permalink: /essays/pashto/
 tags: [language, Pashto, script, literacy, digital]
 ---
 

@@ -36,6 +36,7 @@
 
     <!-- Loop through and filter manually -->
     <ul class="content-list">
+      <p>Coming soon. This website is still under construction!</p>
       {% assign sorted_projects = site.pages | sort: "date" | reverse %}
       {% for page in sorted_projects %}
         {% if page.url contains '/projects/' and page.url != '/projects/' %}

@@ -2,7 +2,6 @@
 layout: essay_single
 title: Brain-Rot Culture
 date: 2024-06-19
-permalink: /essays/brainrot/
 tags: [celebrity, culture, society, education, hypocrisy]
 ---
 I have thought about this a lot, and honestly, this whole obsession with celebrity culture is just dogshit. People spend their lives glorifying actors, athletes, and influencers, as if they are gods, as if their existence somehow adds value to the world. It is really absurd to see people measure value by how much money was wasted on weddings, parties, and luxury nonsense—just so they can talk about it, impress each other with useless conversations, and feel important for knowing things that do not matter.

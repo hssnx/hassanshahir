@@ -2,7 +2,6 @@
 layout: essay_single
 title: "The War We Choose"
 date: 2024-12-24
-permalink: /essays/warwechoose/
 tags: [Afghanistan, invasion, reconstruction, democracy, war]
 ---
 
