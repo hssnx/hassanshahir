@@ -19,4 +19,4 @@ Here, I share my thoughts & readings ([essays](/essays/)), and what I’m workin
 
 <div class="divider"></div>
 
-Email me at hassan@hassanshahir.com. You can also send me encrypted mail using [this PGP public key](https://raw.githubusercontent.com/hssnx/hssnx.github.io/refs/heads/main/assets/hassan.asc) (ID 054E27C1, fingerprint F577 F32C 9960 BDF9 16BB 78B4 D54D 2C1E 054E 27C1).
+Email me at hassan@hassanshahir.com. You can also send me encrypted mail using [this PGP public key](https://raw.githubusercontent.com/hssnx/hssnx.github.io/refs/heads/main/assets/utils/hassan.asc) (ID 054E27C1, fingerprint F577 F32C 9960 BDF9 16BB 78B4 D54D 2C1E 054E 27C1).
