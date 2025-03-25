@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }}</title>
+  <title>Books I Liked in 2024</title>
   <link rel="stylesheet" href="/assets/css/essay_single.css" />
 </head>
 <body>
@@ -29,38 +29,45 @@
       <a href="/projects/">projects</a>
     </div>
 
-    <h1 class="article-title">{{ page.title }}</h1>
+    <h1 class="article-title">Books I Liked in 2024</h1>
 
     <div class="article-properties">
-      <span class="property-date">Published: {{ page.date | date: "%B %d, %Y" }}</span>
+      <span class="property-date">Published: December 30, 2024</span>
       <span class="property-section">Section: Essays</span>
-      {% assign words = content | number_of_words %}
-      {% assign minutes = words | divided_by:200 %}
-      {% assign seconds = words | modulo:200 | times:60 | divided_by:200 %}
+      
+      
+      
       <span class="property-time">
         Time:
-        {% if minutes > 0 %}{{ minutes }} min {% endif %}
-        {% if seconds > 0 %}{{ seconds | round }} sec {% endif %}
+        
+        19 sec 
         read
       </span>
     </div>
 
-    {% if page.tags %}
+    
       <div class="article-properties">
-        <span class="property-tags">Tags: {{ page.tags | join: ", " }}</span>
+        <span class="property-tags">Tags: books, reading, favorites, literature</span>
       </div>
-    {% endif %}
+    
 
     <div class="article-divider"></div>
 
-    {% if page.image %}
-      <div class="article-image">
-        <img src="{{ page.image }}" alt="{{ page.title }}" />
-      </div>
-    {% endif %}
+    
 
     <div class="article-content">
-      {{ content }}
+      <p>Here are some of the books I liked in 2024:</p>
+
+<ul>
+  <li><em>Thus Spoke Zarathustra</em> — Friedrich Nietzsche</li>
+  <li><em>The Metamorphosis</em> — Franz Kafka</li>
+  <li><em>May Contain Lies</em> — Alex Edmans</li>
+  <li><em>The Chimp Paradox</em> — Steve Peters</li>
+  <li><em>Man’s Search for Meaning</em> — Viktor E. Frankl</li>
+</ul>
+
+<p>I also started using Goodreads this year — feel free to friend me <a href="https://www.goodreads.com/user/show/106661626-hassan-shahir">here</a> if you want to exchange book recommendations.</p>
+
     </div>
 
     <div class="essay-back-link">

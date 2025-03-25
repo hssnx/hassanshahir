@@ -14,7 +14,6 @@
       </div>
       <div class="project-header-right">
         <a href="/essays/">essays</a>
-        <a href="/books/">books</a>
         <a href="/projects/">projects</a>
       </div>
       <!-- Hamburger Menu -->
@@ -27,7 +26,6 @@
     <!-- Mobile Navigation Menu -->
     <div class="mobile-nav" id="mobileNav">
       <a href="/essays/">essays</a>
-      <a href="/books/">books</a>
       <a href="/projects/">projects</a>
     </div>
 
@@ -46,21 +44,41 @@
       <p>Last Updated: {{ last_project.date | date: "%B %d, %Y" }}</p>
     </div>
 
-    <div class="divider"></div>
-
-    <!-- Loop through and filter manually -->
+    <!-- Loop through and filter manually with year breaks -->
     <ul class="content-list">
-      <p>Coming soon. This website is still under construction!</p>
       {% assign sorted_projects = site.pages | sort: "date" | reverse %}
+      {% assign current_year = nil %}
+      {% assign project_count = 0 %}
+
       {% for page in sorted_projects %}
         {% if page.url contains '/projects/' and page.url != '/projects/' %}
+          {% assign project_count = project_count | plus: 1 %}
+          {% assign project_year = page.date | date: "%Y" %}
+          
+          {% if project_year != current_year %}
+            {% if current_year != nil %}
+              </ul>
+            {% endif %}
+            
+            <div class="year-separator">
+              <span>{{ project_year }}</span>
+            </div>
+            
+            <ul class="content-list">
+            {% assign current_year = project_year %}
+          {% endif %}
+          
           <li class="content-entry">
-            <span class="item-date">{{ page.date | date: "%B %d, %Y" }}</span>:
+            <span class="item-date">{{ page.date | date: "%B %d" }}</span>:
             <a href="{{ page.url }}">{{ page.title }}</a>
           </li>
         {% endif %}
       {% endfor %}
-    </ul>
+
+      {% if project_count == 0 %}
+        <p>Coming soon. This website is still under construction!</p>
+      {% endif %}
+      </ul>
   </div>
 
   <script>

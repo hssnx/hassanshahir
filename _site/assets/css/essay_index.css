@@ -151,4 +151,28 @@
       display: flex;
     }
   }
-  
+
+.year-separator {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+  color: #666;
+}
+
+.year-separator span {
+  background: white;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.year-separator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #e0e0e0;
+  z-index: 0;
+}
