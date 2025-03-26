@@ -1,6 +1,6 @@
 ---
 layout: essay_single
-title: "Programming Isn’t About Syntax, It’s About Thinking"
+title: "Programming Is Problem Solving"
 date: 2024-10-17
 tags: [programming, logic, AI, problem-solving, syntax]
 ---
