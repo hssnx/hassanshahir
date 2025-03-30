@@ -28,17 +28,20 @@
     </div>
 
     <!-- Fetch and sort projects -->
-    {% assign all_projects = site.pages | where_exp: "p", "p.url contains '/projects/' and p.url != '/projects/'" %}
+    {% assign all_projects = "" | split: "" %}
+    {% for p in site.pages %}
+      {% if p.url contains '/projects/' and p.url != '/projects/'' %}
+        {% assign all_projects = all_projects | push: p %}
+      {% endif %}
+    {% endfor %}    
     {% assign sorted_projects = all_projects | sort: "date" | reverse %}
     {% assign active_projects = sorted_projects | where: "status", "active" %}
-
     {% assign done_projects = "" | split: "" %}
     {% for project in sorted_projects %}
       {% if project.status != 'active' %}
         {% assign done_projects = done_projects | push: project %}
       {% endif %}
     {% endfor %}
-
     {% assign last_project = sorted_projects[0] %}
 
     <!-- Page Description -->
