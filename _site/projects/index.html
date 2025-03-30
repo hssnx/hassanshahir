@@ -8,6 +8,7 @@
 </head>
 <body>
   <div class="project-container">
+    <!-- Header -->
     <div class="project-header-bar">
       <div class="project-header-left">
         <a href="/">Hassan Shahir</a>
@@ -16,109 +17,62 @@
         <a href="/essays/">essays</a>
         <a href="/projects/">projects</a>
       </div>
-      <!-- Hamburger Menu -->
       <div class="hamburger" onclick="toggleMobileNav()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
     </div>
-    <!-- Mobile Navigation Menu -->
+
     <div class="mobile-nav" id="mobileNav">
       <a href="/essays/">essays</a>
       <a href="/projects/">projects</a>
     </div>
 
-    <!-- Find latest updated project manually -->
+    <!-- Fetch and sort projects -->
     
     
-      
     
-      
     
-      
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-        
-        
 
+    <!-- Page Description -->
     <div class="page-properties">
       <h2>Projects</h2>
       <p>A collection of my personal and collaborative projects in tech and beyond.</p>
+      
       <p>Last Updated: April 01, 2024</p>
+      
     </div>
 
-    <!-- Loop through and filter manually with year breaks -->
-    <ul class="content-list">
-      
-      
-      
-
-      
+    <!-- Currently Working On -->
+    
+      <div class="year-separator"><span>Currently I am working on</span></div>
+      <ul class="content-list">
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          
-          
-          
-          
-            
-            
-            <div class="year-separator">
-              <span>2024</span>
-            </div>
-            
-            <ul class="content-list">
-            
-          
-          
           <li class="content-entry">
-            <span class="item-date">April 01</span>:
-            <a href="/projects/test.html">Markdown Render Test</a>
+            <span class="item-date">April 01, 2024</span>:
+            <a href="/projects/homelab.html">The €20 Homelab</a>
           </li>
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-
-      
       </ul>
+    
+
+    <!-- Past Projects -->
+    
+      <div class="year-separator"><span>Past Projects</span></div>
+      <ul class="content-list">
+        
+          <li class="content-entry">
+            <span class="item-date">March 17, 2024</span>:
+            <a href="/projects/test.html">Test Markdown Render</a>
+          </li>
+        
+      </ul>
+    
   </div>
 
   <script>
     function toggleMobileNav() {
-      var mobileNav = document.getElementById('mobileNav');
-      mobileNav.classList.toggle('active');
+      document.getElementById('mobileNav').classList.toggle('active');
     }
   </script>
 </body>

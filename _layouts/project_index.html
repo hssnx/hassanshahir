@@ -8,6 +8,7 @@
 </head>
 <body>
   <div class="project-container">
+    <!-- Header -->
     <div class="project-header-bar">
       <div class="project-header-left">
         <a href="/">Hassan Shahir</a>
@@ -16,75 +17,62 @@
         <a href="/essays/">essays</a>
         <a href="/projects/">projects</a>
       </div>
-      <!-- Hamburger Menu -->
       <div class="hamburger" onclick="toggleMobileNav()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
     </div>
-    <!-- Mobile Navigation Menu -->
+
     <div class="mobile-nav" id="mobileNav">
       <a href="/essays/">essays</a>
       <a href="/projects/">projects</a>
     </div>
 
-    <!-- Find latest updated project manually -->
-    {% assign last_project = nil %}
-    {% for page in site.pages %}
-      {% if page.url contains '/projects/' and page.url != '/projects/' %}
-        {% assign last_project = page %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
+    <!-- Fetch and sort projects -->
+    {% assign all_projects = site.pages | where_exp: "p", "p.url contains '/projects/' and p.url != '/projects/'" %}
+    {% assign sorted_projects = all_projects | sort: "date" | reverse %}
+    {% assign active_projects = sorted_projects | where: "status", "active" %}
+    {% assign done_projects = sorted_projects | where_exp: "project", "project.status and project.status != 'active'" %}
+    {% assign last_project = sorted_projects[0] %}
 
+    <!-- Page Description -->
     <div class="page-properties">
       <h2>Projects</h2>
       <p>A collection of my personal and collaborative projects in tech and beyond.</p>
+      {% if last_project %}
       <p>Last Updated: {{ last_project.date | date: "%B %d, %Y" }}</p>
+      {% endif %}
     </div>
 
-    <!-- Loop through and filter manually with year breaks -->
-    <ul class="content-list">
-      {% assign sorted_projects = site.pages | sort: "date" | reverse %}
-      {% assign current_year = nil %}
-      {% assign project_count = 0 %}
-
-      {% for page in sorted_projects %}
-        {% if page.url contains '/projects/' and page.url != '/projects/' %}
-          {% assign project_count = project_count | plus: 1 %}
-          {% assign project_year = page.date | date: "%Y" %}
-          
-          {% if project_year != current_year %}
-            {% if current_year != nil %}
-              </ul>
-            {% endif %}
-            
-            <div class="year-separator">
-              <span>{{ project_year }}</span>
-            </div>
-            
-            <ul class="content-list">
-            {% assign current_year = project_year %}
-          {% endif %}
-          
+    <!-- Currently Working On -->
+    {% if active_projects.size > 0 %}
+      <div class="year-separator"><span>Currently I am working on</span></div>
+      <ul class="content-list">
+        {% for project in active_projects %}
           <li class="content-entry">
-            <span class="item-date">{{ page.date | date: "%B %d" }}</span>:
-            <a href="{{ page.url }}">{{ page.title }}</a>
+            <span class="item-date">{{ project.date | date: "%B %d, %Y" }}</span>:
+            <a href="{{ project.url }}">{{ project.title }}</a>
           </li>
-        {% endif %}
-      {% endfor %}
-
-      {% if project_count == 0 %}
-        <p>Coming soon. This website is still under construction!</p>
-      {% endif %}
+        {% endfor %}
       </ul>
+    {% endif %}
+
+    <!-- Past Projects -->
+    {% if done_projects.size > 0 %}
+      <div class="year-separator"><span>Past Projects</span></div>
+      <ul class="content-list">
+        {% for project in done_projects %}
+          <li class="content-entry">
+            <span class="item-date">{{ project.date | date: "%B %d, %Y" }}</span>:
+            <a href="{{ project.url }}">{{ project.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </div>
 
   <script>
     function toggleMobileNav() {
-      var mobileNav = document.getElementById('mobileNav');
-      mobileNav.classList.toggle('active');
+      document.getElementById('mobileNav').classList.toggle('active');
     }
   </script>
 </body>
