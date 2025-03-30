@@ -31,7 +31,14 @@
     {% assign all_projects = site.pages | where_exp: "p", "p.url contains '/projects/' and p.url != '/projects/'" %}
     {% assign sorted_projects = all_projects | sort: "date" | reverse %}
     {% assign active_projects = sorted_projects | where: "status", "active" %}
-    {% assign done_projects = sorted_projects | where_exp: "project", "project.status and project.status != 'active'" %}
+
+    {% assign done_projects = "" | split: "" %}
+    {% for project in sorted_projects %}
+      {% if project.status != 'active' %}
+        {% assign done_projects = done_projects | push: project %}
+      {% endif %}
+    {% endfor %}
+
     {% assign last_project = sorted_projects[0] %}
 
     <!-- Page Description -->
