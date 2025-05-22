@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }} | Hassan Shahir</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>{{ page.title }}</h1>
+      <div style="margin-bottom: 1.5em; color: #888; font-size: 0.95em;">
+        {{ page.date | date(format="%Y-%m-%d") }}
+      </div>
+      <article>
+        {{ page.content | safe }}
+      </article>
+      <div style="margin-top:2em;">
+        {% set root = page.components[0] %}
+        {% if root == "essays" %}
+          <a href="/essays/">Back to Essays</a>
+        {% elif root == "projects" %}
+          <a href="/projects/">Back to Projects</a>
+        {% else %}
+          <a href="/">Back to Home</a>
+        {% endif %}
+      </div>        
+    </main>
+  </body>
+</html>

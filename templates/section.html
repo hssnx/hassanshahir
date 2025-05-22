@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ section.title }} | Hassan Shahir</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>{{ section.title }}</h1>
+      {% if section.content %}
+        <div style="margin-bottom: 1.5em;">
+          {{ section.content | safe }}
+        </div>
+      {% endif %}
+      <ul>
+        {% for page in section.pages %}
+          <li>
+            <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+            <span style="font-size: 0.9em; color: #888;">
+              ({{ page.date | date(format="%Y-%m-%d") }})
+            </span>
+          </li>
+        {% endfor %}
+      </ul>
+      <div style="margin-top:2em;">
+        <a href="/">Back to Home</a>
+      </div>
+    </main>
+  </body>
+</html>
