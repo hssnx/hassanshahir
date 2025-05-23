@@ -5,6 +5,7 @@ git add .
 git commit -m "add new writings"
 git push origin main
 
+rm -rf ../public-tmp       # <--- clean up any old build
 zola build --output-dir ../public-tmp
 
 git checkout gh-pages
