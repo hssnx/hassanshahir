@@ -1,5 +1,5 @@
 +++
-title = "Building an AI App for Family Accountability"
+title = "Building an AI App for Accountability"
 date = 2025-03-15
 +++
 
