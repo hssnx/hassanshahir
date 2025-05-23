@@ -5,9 +5,8 @@ git add .
 git commit -m "add new writings"
 git push origin main
 
-zola build
+zola build --output-dir ../public-tmp
 
-cp -r public ../public-tmp
 git checkout gh-pages
 git reset --hard
 git clean -fdx
@@ -19,4 +18,3 @@ git push --force origin gh-pages
 git checkout main
 
 echo "Site updated and deployed!"
-
