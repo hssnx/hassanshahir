@@ -19,5 +19,3 @@ Desktop.ini
 
 # Ignore deployment scripts/secrets
 deploy.sh
-deploy.bat
-secrets.*
