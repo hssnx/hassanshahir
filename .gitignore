@@ -1,2 +1,24 @@
-public/
+# OS junk files
 .DS_Store
+Thumbs.db
+
+# Log and temp files
+*.log
+*.tmp
+
+# macOS metadata
+.AppleDouble
+.LSOverride
+
+# Windows metadata
+Desktop.ini
+
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore deployment scripts/secrets
+deploy.sh
+deploy.bat
+secrets.*
