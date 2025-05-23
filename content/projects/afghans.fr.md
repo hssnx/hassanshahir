@@ -1,5 +1,5 @@
 +++
-title = "Afghans.fr – A Community-as-a-Service Platform"
+title = "Afghans.fr – Unifying the Afghan Diaspora in France"
 date = 2025-05-20
 +++
 
