@@ -1,6 +1,6 @@
 base_url = "https://hassanshahir.com"
 title = "Hassan Shahir"
-description = "Essays, ideas, and notes."
+description = "Essays, ideas, and projects."
 default_language = "en"
 compile_sass = false
 build_search_index = false

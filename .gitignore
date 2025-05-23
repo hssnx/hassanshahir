@@ -13,7 +13,6 @@ Thumbs.db
 # Windows metadata
 Desktop.ini
 
-
 # Ignore environment files
 .env
 .env.*
