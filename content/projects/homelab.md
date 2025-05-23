@@ -3,7 +3,7 @@ title = "Building My First Homelab"
 date = 2024-11-29
 +++
 
-A few weeks ago, I got really influenced by r/homelab and r/selfhosted. Everyone was posting photos of their setups, flexing all the services they managed to self-host. I became genuinely curious and thought, "I have to try this myself at some point."
+A few weeks ago, I got really influenced by [r/homelab](https://old.reddit.com/r/homelab/) and [r/selfhosted](https://old.reddit.com/r/selfhosted/). Everyone was posting photos of their setups, flexing all the services they managed to self-host. I became genuinely curious and thought, "I have to try this myself at some point."
 
 In this write-up, I'll explain how I set up a dirt-cheap mini homelab, what real-world problems it solved for me, and whether I think you should bother doing the same.
 
